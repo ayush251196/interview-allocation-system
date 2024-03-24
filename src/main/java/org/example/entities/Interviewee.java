@@ -26,15 +26,6 @@ public class Interviewee extends User {
         schedules.add(schedule);
     }
 
-    public boolean isAvailableAtSlot(Slot slot) {
-        for (InterviewSlot item : availableSlots) {
-            if (item.isAvailable() && item.getSlot().equals(slot)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public List<Slot> getAvailableSlots() {
         List<Slot> slots = new ArrayList<>();
         for (InterviewSlot slot : availableSlots) {

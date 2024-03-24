@@ -42,12 +42,10 @@ public class InterviewAllocationSystem {
         intervieweeList.add(interviewee);
     }
 
-    public String allocate(String token) {
+    public void allocate(String token) {
         if (authenticator.isValidToken(token)) {
             allocationStrategy.allocate(intervieweeList, interviewerList, interviewTypes);
-            return "SUCCESS";
         }
-        return "FAILURE";
     }
 
     public void displaySchedules(String token) {
@@ -68,21 +66,5 @@ public class InterviewAllocationSystem {
                 }
             }
         }
-    }
-
-    public List<Interviewee> getIntervieweeList() {
-        return intervieweeList;
-    }
-
-    public List<Interviewer> getInterviewerList() {
-        return interviewerList;
-    }
-
-    public List<HumanResources> getHumanResources() {
-        return humanResources;
-    }
-
-    public InterviewAllocationStrategy getAllocationStrategy() {
-        return allocationStrategy;
     }
 }

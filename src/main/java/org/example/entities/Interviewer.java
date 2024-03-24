@@ -23,10 +23,6 @@ public class Interviewer extends User {
         this.schedules = new ArrayList<>();
     }
 
-    public int getYoe() {
-        return yoe;
-    }
-
     public boolean isAvailableAtSlot(Slot slot) {
         for (InterviewSlot item : availableSlots) {
             if (item.isAvailable() && item.getSlot().equals(slot)) {
@@ -44,16 +40,8 @@ public class Interviewer extends User {
         }
     }
 
-    public List<InterviewType> getPreferredTypes() {
-        return preferredTypes;
-    }
-
     public void addInterviewSchedule(InterviewSchedule schedule) {
         schedules.add(schedule);
-    }
-
-    public List<InterviewSchedule> getSchedules() {
-        return schedules;
     }
 
     public List<InterviewSchedule> getSchedulesByInterviewee(Interviewee interviewee) {

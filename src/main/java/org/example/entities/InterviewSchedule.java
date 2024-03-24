@@ -37,7 +37,4 @@ public class InterviewSchedule {
         return interviewSlot;
     }
 
-    public int getId() {
-        return id;
-    }
 }

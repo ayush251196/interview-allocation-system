@@ -3,6 +3,7 @@ package org.example.strategy;
 import org.example.entities.*;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class DefaultInterviewAllocationStrategy implements InterviewAllocationStrategy {
@@ -21,7 +22,7 @@ public class DefaultInterviewAllocationStrategy implements InterviewAllocationSt
                         if (schedules.isEmpty()) {
                             for (Slot slot : availableSlots) {
                                 if (interviewer.isAvailableAtSlot(slot)) {
-                                    schedule = new InterviewSchedule(slot, interviewType, interviewee, Arrays.asList(interviewer));
+                                    schedule = new InterviewSchedule(slot, interviewType, interviewee, Collections.singletonList(interviewer));
                                     interviewer.setAvailability(false, slot);
                                     interviewee.setAvailability(false, slot);
                                     interviewee.addInterviewSchedule(schedule);

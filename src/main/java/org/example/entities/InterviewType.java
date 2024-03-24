@@ -4,7 +4,7 @@ public enum InterviewType {
     MACHINE_CODING("Maching Coding"),
     PSDS("Problem Solving Data Structures");
 
-    private String desc;
+    private final String desc;
 
     InterviewType(String desc) {
         this.desc = desc;

@@ -13,10 +13,6 @@ public class User {
         this.userType = userType;
     }
 
-    public UserType getUserType() {
-        return userType;
-    }
-
     public String getName() {
         return name;
     }
