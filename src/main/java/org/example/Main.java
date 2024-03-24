@@ -13,29 +13,6 @@ import java.util.Collections;
 public class Main {
 
     public static void main(String[] args) {
-        // Register interviewer  : name, id, yoe, preferred rounds, availableSlots [ 1 - 8]
-        // Register interviewee : name, id , yoe, available slots
-
-        // Allocate slots automatically by HR
-        // View allocation
-
-
-        // Entities
-        /**
-         *
-         * Interviewer
-         * Interviewee
-         * HumanResource
-         * User
-         * InterviewSlot
-         * Interview
-         * InterviewType
-         * InterviewAllocationStrategy
-         * InterviewAllocationSystem
-         *
-         *
-         */
-
         HumanResources hr = new HumanResources(UserType.HUMAN_RESOURCES, "Markel HR");
 
         InterviewAllocationStrategy strategy = new DefaultInterviewAllocationStrategy();

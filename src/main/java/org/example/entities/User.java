@@ -4,7 +4,6 @@ public class User {
 
     private final String name;
     private final int id;
-
     private final UserType userType;
 
     public User(UserType userType, String name, int id) {
